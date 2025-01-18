@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid2';
 import { Button, TextField } from '@mui/material';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import axiosInstance from '../../axiosInterceptor';
+import axiosInstance from '../axiosInterceptor';
 const Addblog = () => {
   const[form,setForm]=useState({
     title:'',

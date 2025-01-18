@@ -6,11 +6,11 @@ router.use(express.urlencoded({extended:true}));
 const blogModel= require('../model/blogData');     // for performing all crud operations use model file
 
 function verifytoken(req,res,next){
-  let token=req.headers.token;
+  let token=req.headers.token;            // extract the token from the request
   try {
     if(!token) throw 'Unauthorised access';
     else{
-        let payload=jwt.verify(token,'blogApp');
+        let payload=jwt.verify(token,'blogApp');       // verifying the token using the secret key
         if(!payload) throw 'Unauthorized access';
         next();                                  // we are specifying explicitly that move on to the next request without errors
     }

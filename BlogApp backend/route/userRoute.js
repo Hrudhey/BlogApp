@@ -27,6 +27,18 @@ routes.post('/login',async(req,res)=>{
     
 })
 
+routes.post('/signUp',async (req,res)=>{
+  try{
+      var item= req.body;
+      const data= new userModel(item);           //embedding into the modelname
+      await data.save();
+      res.status(200).send({message:'user added'})
+   //   res.redirect('/');
+  } catch (error){
+      res.status(404).send('Post Unsuccessful');
+  }
+})
+
 
 module.exports=routes;
 

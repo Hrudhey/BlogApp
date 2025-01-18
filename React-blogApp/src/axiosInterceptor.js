@@ -14,4 +14,4 @@ axiosInstance.interceptors.request.use((config)=>{
     return Promise.reject(error);
 })
 
-export default axiosInstance                           // instead opf axios we use axiosInstance in front end
+export default axiosInstance                           // instead of axios we use axiosInstance in front end that is for each request the token is attached using axios

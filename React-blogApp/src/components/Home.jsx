@@ -3,7 +3,7 @@ import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@
 import Grid from '@mui/material/Grid2';
 
 import { useNavigate } from 'react-router-dom';
-import axiosInstance from '../../axiosInterceptor';
+import axiosInstance from '../axiosInterceptor';
 
 
 const Home = () => {
@@ -44,6 +44,7 @@ function delete_blog(id) {
 
 
   return (
+    
     <div style={{margin:'5%'}}>
      <Grid container spacing={2}>
         {cardData.map((row)=>(     
@@ -77,6 +78,7 @@ function delete_blog(id) {
     </Grid>
      
     </div>
+    
   )
 }
 
