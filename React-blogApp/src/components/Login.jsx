@@ -30,7 +30,7 @@ const Login = () => {
    })
   }            
   return (
-    <div class='container1' style={{margin:'10%'}}>
+    <div className='container1' style={{margin:'10%'}}>
         <Typography variant='h3' style={{color:'white',marginTop:'20px'}}>BlogApp Login</Typography>
         <br></br><br></br>
         <div>
